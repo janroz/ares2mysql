@@ -123,7 +123,7 @@ foreach($data->getDocNamespaces() as $strPrefix => $strNamespace) {
     $data->registerXPathNamespace($strPrefix,$strNamespace);
 }
 
-$db = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME';charset=utf8', DB_USER, DB_PASS, array(PDO::ATTR_EMULATE_PREPARES => false,  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$db = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS, array(PDO::ATTR_EMULATE_PREPARES => false,  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $db->beginTransaction();
 
 define("TEXT_ARRAY", ["Text"]);
